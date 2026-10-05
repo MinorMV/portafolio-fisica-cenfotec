@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Tema 2 | El salto del personaje
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+</head>
+
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a
+                class="logo"
+                href="index.html"
+            >
+                Física<span>Lab</span>
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <a href="tema1.html">
+                    Tema 1
+                </a>
+
+                <a href="tema2.html">
+                    Tema 2
+                </a>
+
+                <a href="tema3.html">
+                    Tema 3
+                </a>
+
+                <a href="tema4.html">
+                    Tema 4
+                </a>
+
+                <a href="tema5.html">
+                    Tema 5
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+        <section class="topic-section">
+
+            <div class="topic-header">
+
+                <span class="topic-label">
+                    Tema 2
+                </span>
+
+                <h1>
+                    El salto del personaje: cómo los motores de juego falsean la gravedad
+                </h1>
+
+                <p class="topic-subtitle">
+                    Caída libre y tiro parabólico
+                </p>
+
+            </div>
+
+
+            <div class="topic-content">
+
+                <!-- CASO DE USO -->
+
+                <div class="content-block">
+
+                    <h3>
+                        Caso de uso en Ingeniería del Software
+                    </h3>
+
+                    <p>
+                        En los videojuegos, el salto de un personaje no siempre
+                        utiliza directamente la gravedad terrestre de 9.81 m/s².
+                        Los motores de juego suelen modificar la gravedad y el
+                        impulso inicial para conseguir que el movimiento se
+                        sienta más rápido, controlable o adecuado para el ritmo
+                        del juego.
+                    </p>
+
+                    <p>
+                        El software calcula la posición vertical del personaje
+                        en cada instante usando ecuaciones de movimiento. De
+                        esta manera, un mismo sistema puede producir distintos
+                        tipos de salto sin tener que programar manualmente una
+                        animación diferente para cada caso.
+                    </p>
+
+                </div>
+
+
+                <!-- MODELO FÍSICO -->
+
+                <div class="content-block">
+
+                    <h3>
+                        Modelo físico utilizado
+                    </h3>
+
+                    <p>
+                        Para representar el salto se utiliza el movimiento
+                        vertical uniformemente acelerado.
+                    </p>
+
+                    <p>
+                        La posición vertical del personaje se calcula con:
+                    </p>
+
+                    <div class="formula">
+                        y(t) = y₀ + v₀t - ½gt²
+                    </div>
+
+                    <p>
+                        La velocidad vertical en cada instante se obtiene con:
+                    </p>
+
+                    <div class="formula">
+                        v(t) = v₀ - gt
+                    </div>
+
+                    <p>
+                        También se puede calcular la altura máxima del salto:
+                    </p>
+
+                    <div class="formula">
+                        hₘₐₓ = v₀² / 2g
+                    </div>
+
+                    <p>
+                        Y el tiempo total en el aire, suponiendo que el personaje
+                        aterriza a la misma altura desde la que saltó:
+                    </p>
+
+                    <div class="formula">
+                        tᵥᵤₑₗₒ = 2v₀ / g
+                    </div>
+
+                    <ul class="variable-list">
+
+                        <li>
+                            <strong>y(t)</strong>:
+                            posición vertical.
+                        </li>
+
+                        <li>
+                            <strong>y₀</strong>:
+                            posición inicial.
+                        </li>
+
+                        <li>
+                            <strong>v₀</strong>:
+                            impulso o velocidad inicial del salto.
+                        </li>
+
+                        <li>
+                            <strong>g</strong>:
+                            gravedad utilizada por el motor.
+                        </li>
+
+                        <li>
+                            <strong>t</strong>:
+                            tiempo transcurrido.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- JUSTIFICACIÓN -->
+
+                <div class="content-block">
+
+                    <h3>
+                        ¿Por qué modificar la gravedad?
+                    </h3>
+
+                    <p>
+                        Un videojuego no necesariamente busca reproducir la
+                        gravedad real con exactitud. Si todos los personajes
+                        utilizaran 9.81 m/s², algunos saltos podrían sentirse
+                        demasiado lentos, bajos o poco responsivos para la
+                        experiencia que busca el diseñador.
+                    </p>
+
+                    <p>
+                        Al trabajar con un modelo físico, el motor puede cambiar
+                        el impulso o la gravedad y recalcular el movimiento en
+                        tiempo real. Esto es más flexible que utilizar una
+                        animación fija o una trayectoria precalculada, porque el
+                        salto puede responder a diferentes condiciones del juego.
+                    </p>
+
+                </div>
+
+
+                <!-- SIMULACIÓN -->
+
+                <div class="content-block">
+
+                    <h3>
+                        Simulación interactiva
+                    </h3>
+
+                    <p>
+                        Configure el impulso inicial y el valor de la gravedad.
+                        Después presione el botón de simulación para observar
+                        cómo cambian la altura máxima, el tiempo en el aire y
+                        la trayectoria del personaje.
+                    </p>
+
+
+                    <div class="simulation-container">
+
+
+                        <!-- CONTROLES -->
+
+                        <div class="simulation-controls">
+
+                            <div class="control-group">
+
+                                <label for="jumpImpulse">
+
+                                    Impulso de salto:
+
+                                    <strong>
+                                        <span id="jumpImpulseValue">
+                                            12.0
+                                        </span>
+                                        m/s
+                                    </strong>
+
+                                </label>
+
+                                <input
+                                    type="range"
+                                    id="jumpImpulse"
+                                    min="6"
+                                    max="20"
+                                    step="0.5"
+                                    value="12"
+                                >
+
+                            </div>
+
+
+                            <div class="control-group">
+
+                                <label for="gravityControl">
+
+                                    Gravedad:
+
+                                    <strong>
+                                        <span id="gravityValue">
+                                            9.81
+                                        </span>
+                                        m/s²
+                                    </strong>
+
+                                </label>
+
+                                <input
+                                    type="range"
+                                    id="gravityControl"
+                                    min="4"
+                                    max="20"
+                                    step="0.1"
+                                    value="9.81"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BOTÓN DE SIMULACIÓN -->
+
+                        <div class="simulation-action">
+
+                            <button
+                                type="button"
+                                id="simulateButton"
+                                class="simulate-button"
+                            >
+                                Simular salto
+                            </button>
+
+                            <p class="simulation-help">
+                                Configure los parámetros y ejecute la simulación
+                                para obtener los resultados.
+                            </p>
+
+                        </div>
+
+
+                        <!-- RESULTADOS -->
+
+                        <div class="simulation-data">
+
+                            <div class="simulation-stat">
+
+                                <span>
+                                    Altura máxima
+                                </span>
+
+                                <strong id="maxHeight">
+                                    Sin simular
+                                </strong>
+
+                            </div>
+
+
+                            <div class="simulation-stat">
+
+                                <span>
+                                    Tiempo en el aire
+                                </span>
+
+                                <strong id="airTime">
+                                    Sin simular
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ESCENA -->
+
+                        <div class="jump-world">
+
+                            <div
+                                class="character"
+                                id="character"
+                            ></div>
+
+                            <div class="ground"></div>
+
+                        </div>
+
+
+                        <!-- GRÁFICA -->
+
+                        <div class="trajectory-container">
+
+                            <canvas id="jumpChart"></canvas>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ANÁLISIS -->
+
+                <div class="content-block">
+
+                    <h3>
+                        Análisis de la simulación
+                    </h3>
+
+                    <p>
+                        Al aumentar el impulso inicial, el personaje alcanza una
+                        mayor altura y permanece más tiempo en el aire. Por el
+                        contrario, al aumentar la gravedad, el personaje pierde
+                        velocidad vertical más rápidamente y regresa al suelo
+                        en menos tiempo.
+                    </p>
+
+                    <p>
+                        La simulación permite observar que el mismo sistema de
+                        ecuaciones puede producir saltos muy diferentes según
+                        los parámetros elegidos por el desarrollador. Esto
+                        explica por qué dos videojuegos pueden presentar
+                        movimientos distintos aunque ambos utilicen principios
+                        físicos similares.
+                    </p>
+
+                    <p>
+                        A diferencia de una animación previamente definida, este
+                        modelo permite que la trayectoria se calcule nuevamente
+                        cada vez que cambian los parámetros. De esta forma, el
+                        comportamiento del personaje puede adaptarse durante la
+                        ejecución del juego sin necesidad de crear manualmente
+                        cada posible salto.
+                    </p>
+
+                </div>
+
+
+                <!-- NAVEGACIÓN -->
+
+                <div class="topic-navigation">
+
+                    <a
+                        href="tema1.html"
+                        class="btn-secondary"
+                    >
+                        ← Tema 1
+                    </a>
+
+                    <a
+                        href="tema3.html"
+                        class="btn-primary"
+                    >
+                        Tema 3 →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <strong>
+                    Portafolio de Física I
+                </strong>
+
+                <p>
+                    Universidad CENFOTEC
+                </p>
+
+            </div>
+
+            <div>
+
+                <p>
+                    Minor Mora Vargas
+                </p>
+
+                <p>
+                    2026
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- LIBRERÍAS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js"
+    ></script>
+
+    <script
+        src="js/tema2.js"
+    ></script>
+
+</body>
+
+</html>

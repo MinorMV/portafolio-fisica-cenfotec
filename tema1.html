@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Tema 1 | Rastreo y navegación de un dron
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVEGACIÓN -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a
+                class="logo"
+                href="index.html"
+            >
+                Física<span>Lab</span>
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <a href="tema1.html">
+                    Tema 1
+                </a>
+
+                <a href="tema2.html">
+                    Tema 2
+                </a>
+
+                <a href="tema3.html">
+                    Tema 3
+                </a>
+
+                <a href="tema4.html">
+                    Tema 4
+                </a>
+
+                <a href="tema5.html">
+                    Tema 5
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+        <section class="topic-section">
+
+
+            <!-- ENCABEZADO DEL TEMA -->
+
+            <div class="topic-header">
+
+                <span class="topic-label">
+                    Tema 1
+                </span>
+
+                <h1>
+                    Rastreo y navegación de un dron de reparto
+                </h1>
+
+                <p class="topic-subtitle">
+                    Cinemática en dos dimensiones
+                </p>
+
+            </div>
+
+
+            <div class="topic-content">
+
+
+                <!-- CASO DE USO -->
+
+                <div class="content-block">
+
+                    <h3>
+                        Caso de uso en Ingeniería del Software
+                    </h3>
+
+                    <p>
+                        En un sistema de reparto mediante drones, el software
+                        de navegación debe conocer en todo momento la posición
+                        del vehículo, la rapidez con la que se desplaza y cómo
+                        cambia su velocidad durante el recorrido.
+                    </p>
+
+                    <p>
+                        Para lograrlo se utilizan principios de cinemática en
+                        dos dimensiones, ya que el movimiento del dron puede
+                        representarse mediante componentes sobre los ejes X y Y.
+                        Este modelo permite actualizar la trayectoria de forma
+                        dinámica y corregir cambios durante el vuelo.
+                    </p>
+
+                </div>
+
+
+                <!-- MODELO FÍSICO -->
+
+                <div class="content-block">
+
+                    <h3>
+                        Modelo físico utilizado
+                    </h3>
+
+                    <p>
+                        La posición del dron se representa mediante un vector
+                        de posición:
+                    </p>
+
+                    <div class="formula">
+                        r(t) = x(t)i + y(t)j
+                    </div>
+
+
+                    <p>
+                        La velocidad corresponde al cambio de posición con
+                        respecto al tiempo:
+                    </p>
+
+                    <div class="formula">
+                        v(t) = Δr / Δt
+                    </div>
+
+
+                    <p>
+                        En cada componente:
+                    </p>
+
+                    <div class="formula">
+                        vx = Δx / Δt
+                    </div>
+
+                    <div class="formula">
+                        vy = Δy / Δt
+                    </div>
+
+
+                    <p>
+                        La magnitud de la velocidad se calcula mediante:
+                    </p>
+
+                    <div class="formula">
+                        |v| = √(vx² + vy²)
+                    </div>
+
+
+                    <p>
+                        La aceleración representa el cambio de velocidad
+                        con respecto al tiempo:
+                    </p>
+
+                    <div class="formula">
+                        a = Δv / Δt
+                    </div>
+
+                </div>
+
+
+                <!-- JUSTIFICACIÓN -->
+
+                <div class="content-block">
+
+                    <h3>
+                        ¿Por qué utilizar un modelo físico?
+                    </h3>
+
+                    <p>
+                        Usar ecuaciones de movimiento permite que el sistema
+                        de navegación calcule el comportamiento del dron
+                        en función de los datos que recibe durante el vuelo.
+                    </p>
+
+                    <p>
+                        Si la trayectoria se programara únicamente mediante
+                        posiciones fijas o movimientos precalculados, el
+                        sistema tendría menos capacidad para reaccionar
+                        ante cambios de velocidad o desviaciones en la ruta.
+                        Un modelo físico permite recalcular la posición y el
+                        movimiento de forma continua.
+                    </p>
+
+                </div>
+
+
+                <!-- RUTA -->
+
+                <div class="content-block">
+
+                    <h3>
+                        Ruta simulada del dron
+                    </h3>
+
+                    <p>
+                        Para analizar el movimiento se generó una ruta simulada
+                        de 10 segundos, utilizando posiciones en los ejes X y Y.
+                        A partir de estos datos se calculan la velocidad y la
+                        aceleración del dron.
+                    </p>
+
+                    <div class="data-source">
+                        Fuente de los datos: elaboración propia a partir
+                        de una ruta simulada.
+                    </div>
+
+                </div>
+
+
+                <!-- POSICIÓN -->
+
+                <div class="content-block">
+
+                    <h3>
+                        Perfil de posición
+                    </h3>
+
+                    <p>
+                        La siguiente gráfica representa el cambio de posición
+                        del dron en los ejes X y Y durante los 10 segundos
+                        considerados en la ruta simulada.
+                    </p>
+
+                    <div class="chart-container">
+
+                        <canvas id="positionChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VELOCIDAD -->
+
+                <div class="content-block">
+
+                    <h3>
+                        Perfil de velocidad
+                    </h3>
+
+                    <p>
+                        La velocidad se obtiene a partir del cambio de posición
+                        durante cada intervalo de tiempo. Se muestran las
+                        componentes X, Y y la magnitud total de la velocidad.
+                    </p>
+
+                    <div class="chart-container">
+
+                        <canvas id="velocityChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACELERACIÓN -->
+
+                <div class="content-block">
+
+                    <h3>
+                        Perfil de aceleración
+                    </h3>
+
+                    <p>
+                        La aceleración se determina mediante el cambio de
+                        velocidad entre intervalos consecutivos.
+                    </p>
+
+                    <p class="chart-note">
+                        La aceleración comienza a representarse a partir
+                        del segundo 2, ya que para calcular el cambio de
+                        velocidad se necesitan dos intervalos consecutivos
+                        de movimiento.
+                    </p>
+
+                    <div class="chart-container">
+
+                        <canvas id="accelerationChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TABLA -->
+
+                <div class="content-block">
+
+                    <h3>
+                        Datos obtenidos de la ruta
+                    </h3>
+
+                    <p>
+                        La siguiente tabla muestra las posiciones definidas
+                        para la trayectoria y los valores de velocidad
+                        calculados a partir del desplazamiento realizado
+                        durante cada intervalo de un segundo.
+                    </p>
+
+
+                    <div class="table-container">
+
+                        <table class="data-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Tiempo (s)
+                                    </th>
+
+                                    <th>
+                                        X (m)
+                                    </th>
+
+                                    <th>
+                                        Y (m)
+                                    </th>
+
+                                    <th>
+                                        Vx (m/s)
+                                    </th>
+
+                                    <th>
+                                        Vy (m/s)
+                                    </th>
+
+                                    <th>
+                                        |V| (m/s)
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>—</td>
+                                    <td>—</td>
+                                    <td>—</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>5</td>
+                                    <td>2</td>
+                                    <td>5</td>
+                                    <td>2</td>
+                                    <td>5.39</td>
+                                </tr>
+
+                                <tr>
+                                    <td>2</td>
+                                    <td>11</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>3</td>
+                                    <td>6.71</td>
+                                </tr>
+
+                                <tr>
+                                    <td>3</td>
+                                    <td>18</td>
+                                    <td>9</td>
+                                    <td>7</td>
+                                    <td>4</td>
+                                    <td>8.06</td>
+                                </tr>
+
+                                <tr>
+                                    <td>4</td>
+                                    <td>26</td>
+                                    <td>14</td>
+                                    <td>8</td>
+                                    <td>5</td>
+                                    <td>9.43</td>
+                                </tr>
+
+                                <tr>
+                                    <td>5</td>
+                                    <td>35</td>
+                                    <td>20</td>
+                                    <td>9</td>
+                                    <td>6</td>
+                                    <td>10.82</td>
+                                </tr>
+
+                                <tr>
+                                    <td>6</td>
+                                    <td>45</td>
+                                    <td>27</td>
+                                    <td>10</td>
+                                    <td>7</td>
+                                    <td>12.21</td>
+                                </tr>
+
+                                <tr>
+                                    <td>7</td>
+                                    <td>56</td>
+                                    <td>35</td>
+                                    <td>11</td>
+                                    <td>8</td>
+                                    <td>13.60</td>
+                                </tr>
+
+                                <tr>
+                                    <td>8</td>
+                                    <td>68</td>
+                                    <td>44</td>
+                                    <td>12</td>
+                                    <td>9</td>
+                                    <td>15.00</td>
+                                </tr>
+
+                                <tr>
+                                    <td>9</td>
+                                    <td>81</td>
+                                    <td>54</td>
+                                    <td>13</td>
+                                    <td>10</td>
+                                    <td>16.40</td>
+                                </tr>
+
+                                <tr>
+                                    <td>10</td>
+                                    <td>95</td>
+                                    <td>65</td>
+                                    <td>14</td>
+                                    <td>11</td>
+                                    <td>17.80</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <p class="table-note">
+
+                        Los valores de velocidad se obtienen mediante el
+                        cambio de posición entre intervalos consecutivos
+                        de un segundo. Posteriormente, la aceleración se
+                        calcula utilizando el cambio de esas velocidades.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ANÁLISIS -->
+
+                <div class="content-block">
+
+                    <h3>
+                        Análisis
+                    </h3>
+
+                    <p>
+                        Los resultados muestran un aumento progresivo de la
+                        posición del dron en ambos ejes. Entre el inicio y
+                        el segundo 10, la posición pasa de (0, 0) m a
+                        (95, 65) m. Al mismo tiempo, las componentes de
+                        velocidad aumentan de forma gradual, llegando a
+                        14 m/s en X y 11 m/s en Y.
+                    </p>
+
+                    <p>
+                        A partir de los cambios de velocidad se obtiene una
+                        aceleración aproximada de 1 m/s² en cada componente,
+                        cuya magnitud es de aproximadamente 1.41 m/s².
+                        Esto muestra que el movimiento no mantiene una
+                        velocidad constante, sino que el dron acelera
+                        progresivamente durante la ruta.
+                    </p>
+
+                    <p>
+                        En un sistema de navegación, estos cálculos permiten
+                        comparar el movimiento esperado con los datos obtenidos
+                        durante el vuelo. Si la posición o la velocidad real
+                        se apartan de la trayectoria prevista, el software
+                        puede detectar la desviación y realizar una corrección
+                        sin depender de una secuencia de movimientos programada
+                        previamente.
+                    </p>
+
+                </div>
+
+
+                <!-- NAVEGACIÓN ENTRE TEMAS -->
+
+                <div class="topic-navigation">
+
+                    <a
+                        href="index.html"
+                        class="btn-secondary"
+                    >
+                        ← Volver al inicio
+                    </a>
+
+                    <a
+                        href="tema2.html"
+                        class="btn-primary"
+                    >
+                        Tema 2 →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <strong>
+                    Portafolio de Física I
+                </strong>
+
+                <p>
+                    Universidad CENFOTEC
+                </p>
+
+            </div>
+
+            <div>
+
+                <p>
+                    Minor Mora Vargas
+                </p>
+
+                <p>
+                    2026
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- LIBRERÍAS Y JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js"
+    ></script>
+
+    <script
+        src="js/tema1.js"
+    ></script>
+
+
+</body>
+
+</html>
