@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 3 | Gravedad artificial</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a class="logo" href="index.html">
+                Física<span>Lab</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="tema1.html">Tema 1</a>
+                <a href="tema2.html">Tema 2</a>
+                <a href="tema3.html">Tema 3</a>
+                <a href="tema4.html">Tema 4</a>
+                <a href="tema5.html">Tema 5</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <main>
+
+        <section class="topic-section">
+
+            <div class="topic-header">
+
+                <span class="topic-label">
+                    Tema 3
+                </span>
+
+                <h1>
+                    Gravedad artificial por rotación en hábitats espaciales
+                </h1>
+
+                <p class="topic-subtitle">
+                    Movimiento circular uniforme y aceleración centrípeta
+                </p>
+
+            </div>
+
+
+            <div class="topic-content">
+
+                <div class="content-block">
+
+                    <h3>
+                        Caso de uso en Ingeniería del Software
+                    </h3>
+
+                    <p>
+                        En el diseño de hábitats espaciales rotatorios, el software
+                        de simulación debe calcular la velocidad angular necesaria
+                        para generar una aceleración aparente similar a la gravedad
+                        terrestre.
+                    </p>
+
+                    <p>
+                        Este tipo de simulación permite analizar cómo cambian las
+                        condiciones internas del hábitat al modificar su radio o
+                        su velocidad de rotación. El modelo físico es necesario
+                        para evitar depender de valores fijos y poder evaluar
+                        diferentes configuraciones antes de construir un sistema real.
+                    </p>
+
+                </div>
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Modelo físico utilizado
+                    </h3>
+
+                    <p>
+                        En un sistema rotatorio, la aceleración centrípeta se dirige
+                        hacia el eje de giro y se calcula mediante:
+                    </p>
+
+                    <div class="formula">
+                        aₙ = v² / r
+                    </div>
+
+                    <p>
+                        También puede expresarse utilizando la velocidad angular:
+                    </p>
+
+                    <div class="formula">
+                        aₙ = ω²r
+                    </div>
+
+                    <p>
+                        La velocidad angular se relaciona con el período mediante:
+                    </p>
+
+                    <div class="formula">
+                        ω = 2π / T
+                    </div>
+
+                    <p>
+                        Y para convertir la velocidad angular a revoluciones por minuto:
+                    </p>
+
+                    <div class="formula">
+                        RPM = (ω / 2π) × 60
+                    </div>
+
+                    <ul class="variable-list">
+                        <li><strong>aₙ</strong>: aceleración centrípeta.</li>
+                        <li><strong>v</strong>: velocidad tangencial.</li>
+                        <li><strong>r</strong>: radio del hábitat.</li>
+                        <li><strong>ω</strong>: velocidad angular.</li>
+                        <li><strong>T</strong>: período de rotación.</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="content-block">
+
+                    <h3>
+                        ¿Por qué utilizar un modelo físico?
+                    </h3>
+
+                    <p>
+                        Si el sistema utilizara valores fijos de rotación sin considerar
+                        el radio del hábitat, no podría garantizar una aceleración
+                        determinada. La misma cantidad de RPM puede producir efectos
+                        muy diferentes dependiendo del tamaño de la estructura.
+                    </p>
+
+                    <p>
+                        El uso de ecuaciones permite que el software recalcule la
+                        velocidad de rotación necesaria para cada diseño y evalúe si
+                        las condiciones son adecuadas para generar una gravedad aparente
+                        cercana a la terrestre.
+                    </p>
+
+                </div>
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Diagrama del hábitat rotatorio
+                    </h3>
+
+                    <p>
+                        El siguiente esquema representa un hábitat circular que gira
+                        alrededor de su eje central. Una persona ubicada en el borde
+                        experimenta una aceleración centrípeta dirigida hacia el centro.
+                    </p>
+
+                    <div class="space-diagram">
+
+                        <div class="habitat-ring">
+
+                            <div class="axis-point">
+                                Eje
+                            </div>
+
+                            <div class="radius-line">
+                                <span>
+                                    r
+                                </span>
+                            </div>
+                            <div class="astronaut">
+                                ●
+                            </div>
+
+                            <div class="centripetal-arrow">
+                                <span class="arrow-line"></span>
+                                <span class="arrow-label">aₙ</span>
+                            </div>
+
+                            <div class="rotation-arrow">
+                                ↻ ω
+                            </div>
+                        </div>
+
+                        <div class="diagram-equations">
+                            <span>aₙ = ω²r</span>
+                            <span>ω = 2π/T</span>
+                        </div>
+
+                    </div>
+
+                    <div class="data-source">
+                        Diagrama de elaboración propia.
+                    </div>
+
+                </div>
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Caso numérico: gravedad aparente de 1 g
+                    </h3>
+
+                    <p>
+                        Para el ejemplo se toma un hábitat con un radio de
+                        <strong>100 metros</strong>. El objetivo es calcular la
+                        velocidad de rotación necesaria para producir una aceleración
+                        equivalente a la gravedad terrestre:
+                    </p>
+
+                    <div class="formula">
+                        aₙ = 9.81 m/s²
+                    </div>
+
+                    <p>
+                        Partiendo de:
+                    </p>
+
+                    <div class="formula">
+                        aₙ = ω²r
+                    </div>
+
+                    <p>
+                        Se despeja la velocidad angular:
+                    </p>
+
+                    <div class="formula">
+                        ω = √(aₙ / r)
+                    </div>
+
+                    <p>
+                        Sustituyendo los valores:
+                    </p>
+
+                    <div class="formula">
+                        ω = √(9.81 / 100)
+                    </div>
+
+                    <div class="formula">
+                        ω ≈ 0.313 rad/s
+                    </div>
+
+                    <p>
+                        Ahora se convierte a revoluciones por minuto:
+                    </p>
+
+                    <div class="formula">
+                        RPM = (0.313 / 2π) × 60
+                    </div>
+
+                    <div class="formula">
+                        RPM ≈ 2.99
+                    </div>
+
+                    <p>
+                        Por lo tanto, un hábitat de 100 metros de radio tendría
+                        que girar aproximadamente a <strong>3 RPM</strong> para
+                        producir una gravedad aparente cercana a 1 g en su borde.
+                    </p>
+
+                </div>
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Análisis
+                    </h3>
+
+                    <p>
+                        El resultado muestra que la gravedad artificial depende
+                        directamente tanto del radio como de la velocidad de rotación.
+                        Un hábitat pequeño necesita girar más rápido para producir
+                        la misma aceleración que uno de mayor tamaño.
+                    </p>
+
+                    <p>
+                        Desde el punto de vista del software, este modelo permite
+                        probar diferentes diseños de forma rápida y calcular si una
+                        configuración puede generar la aceleración deseada sin tener
+                        que construir físicamente cada alternativa.
+                    </p>
+
+                </div>
+
+
+                <div class="topic-navigation">
+
+                    <a href="tema2.html" class="btn-secondary">
+                        ← Tema 2
+                    </a>
+
+                    <a href="tema4.html" class="btn-primary">
+                        Tema 4 →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <strong>Portafolio de Física I</strong>
+                <p>Universidad CENFOTEC</p>
+            </div>
+
+            <div>
+                <p>Minor Mora Vargas</p>
+                <p>2026</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

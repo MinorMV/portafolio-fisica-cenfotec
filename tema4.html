@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 4 | Llantas de Fórmula 1</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a class="logo" href="index.html">
+                Física<span>Lab</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="tema1.html">Tema 1</a>
+                <a href="tema2.html">Tema 2</a>
+                <a href="tema3.html">Tema 3</a>
+                <a href="tema4.html">Tema 4</a>
+                <a href="tema5.html">Tema 5</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <main>
+
+        <section class="topic-section">
+
+            <div class="topic-header">
+
+                <span class="topic-label">
+                    Tema 4
+                </span>
+
+                <h1>
+                    Llantas de Fórmula 1: la ventana de temperatura y el agarre
+                </h1>
+
+                <p class="topic-subtitle">
+                    Fricción, coeficiente de fricción y fuerza normal
+                </p>
+
+            </div>
+
+
+            <div class="topic-content">
+
+                <div class="content-block">
+
+                    <h3>
+                        Caso de uso en Ingeniería del Software
+                    </h3>
+
+                    <p>
+                        En simuladores de automovilismo y en software de análisis
+                        de rendimiento, el comportamiento de las llantas se modela
+                        utilizando principios de fricción. El sistema debe estimar
+                        cuánto agarre ofrece un neumático según su temperatura,
+                        ya que esto afecta directamente la aceleración, el frenado
+                        y la capacidad de tomar curvas.
+                    </p>
+
+                    <p>
+                        Un modelo físico permite representar de forma dinámica cómo
+                        cambia el rendimiento del vehículo durante la carrera, en lugar
+                        de usar un nivel fijo de agarre independiente de las condiciones
+                        de la pista o del estado de la llanta.
+                    </p>
+
+                </div>
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Modelo físico utilizado
+                    </h3>
+
+                    <p>
+                        La fuerza de fricción puede expresarse mediante:
+                    </p>
+
+                    <div class="formula">
+                        F_f = μN
+                    </div>
+
+                    <p>
+                        Donde:
+                    </p>
+
+                    <ul class="variable-list">
+                        <li><strong>F_f</strong>: fuerza de fricción.</li>
+                        <li><strong>μ</strong>: coeficiente de fricción.</li>
+                        <li><strong>N</strong>: fuerza normal.</li>
+                    </ul>
+
+                    <p>
+                        En una llanta de competición, el valor de <strong>μ</strong>
+                        no es constante. Este coeficiente depende, entre otros factores,
+                        de la temperatura del neumático. Si la llanta está demasiado fría,
+                        no alcanza el agarre ideal; y si se sobrecalienta, también pierde
+                        eficiencia.
+                    </p>
+
+                </div>
+
+
+                <div class="content-block">
+
+                    <h3>
+                        ¿Por qué usar un modelo físico?
+                    </h3>
+
+                    <p>
+                        Si un videojuego o simulador asignara un mismo nivel de agarre
+                        para cualquier situación, el comportamiento del vehículo sería
+                        poco realista. El conductor no percibiría cambios al calentar
+                        las llantas o al exigir demasiado el neumático en curvas y frenadas.
+                    </p>
+
+                    <p>
+                        Usar un modelo físico permite que el software ajuste el valor
+                        del agarre según la temperatura y otras variables, produciendo
+                        una simulación más útil para entrenamiento, análisis y diseño
+                        de estrategias.
+                    </p>
+
+                </div>
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Visualización de datos
+                    </h3>
+
+                    <p>
+                        La siguiente gráfica representa una estimación del coeficiente
+                        de fricción de una llanta de Fórmula 1 según su temperatura.
+                        Los valores se presentan como una visualización de elaboración
+                        propia para ilustrar el concepto de ventana óptima de trabajo.
+                    </p>
+
+                    <div class="chart-container">
+                        <canvas id="tireChart"></canvas>
+                    </div>
+
+                    <div class="data-source">
+                        Fuente de los datos: elaboración propia con fines educativos, basada en el comportamiento
+                        general de una ventana óptima de temperatura del neumático. Los valores no representan datos
+                        oficiales de un compuesto específico de Fórmula 1.
+                    </div>
+
+                </div>
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Datos de referencia
+                    </h3>
+
+                    <div class="table-container">
+
+                        <table class="data-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Temperatura (°C)</th>
+                                    <th>Coeficiente de fricción (μ)</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>60</td>
+                                    <td>0.85</td>
+                                </tr>
+                                <tr>
+                                    <td>70</td>
+                                    <td>0.95</td>
+                                </tr>
+                                <tr>
+                                    <td>80</td>
+                                    <td>1.05</td>
+                                </tr>
+                                <tr>
+                                    <td>90</td>
+                                    <td>1.15</td>
+                                </tr>
+                                <tr>
+                                    <td>100</td>
+                                    <td>1.22</td>
+                                </tr>
+                                <tr>
+                                    <td>110</td>
+                                    <td>1.18</td>
+                                </tr>
+                                <tr>
+                                    <td>120</td>
+                                    <td>1.08</td>
+                                </tr>
+                                <tr>
+                                    <td>130</td>
+                                    <td>0.96</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    <p class="table-note">
+                        Se observa un aumento del agarre hasta una zona óptima cercana a
+                        los 100 °C, seguido por una disminución cuando la llanta supera
+                        esa ventana de temperatura.
+                    </p>
+
+                </div>
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Análisis
+                    </h3>
+
+                    <p>
+                        La gráfica muestra que el coeficiente de fricción aumenta a medida
+                        que la llanta se acerca a su rango óptimo de temperatura. En este
+                        ejemplo, el valor máximo se alcanza alrededor de los 100 °C, donde
+                        el neumático ofrece su mejor agarre.
+                    </p>
+
+                    <p>
+                        Cuando la temperatura es demasiado baja, la llanta no se adhiere de
+                        forma eficiente a la pista. Por otro lado, si la temperatura aumenta
+                        en exceso, el coeficiente de fricción vuelve a disminuir, reduciendo
+                        el rendimiento del vehículo.
+                    </p>
+
+                    <p>
+                        En software de simulación, este comportamiento permite modelar de
+                        forma más realista la conducción y analizar estrategias de carrera,
+                        ya que el agarre disponible deja de ser un valor fijo y pasa a depender
+                        del estado dinámico del neumático.
+                    </p>
+
+                </div>
+
+
+                <div class="topic-navigation">
+
+                    <a href="tema3.html" class="btn-secondary">
+                        ← Tema 3
+                    </a>
+
+                    <a href="tema5.html" class="btn-primary">
+                        Tema 5 →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <strong>Portafolio de Física I</strong>
+                <p>Universidad CENFOTEC</p>
+            </div>
+
+            <div>
+                <p>Minor Mora Vargas</p>
+                <p>2026</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/tema4.js"></script>
+
+</body>
+
+</html>

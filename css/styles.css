@@ -868,3 +868,566 @@ footer {
 
     font-size: 0.9rem;
 }
+.space-diagram {
+    margin-top: 25px;
+    padding: 30px;
+
+    background: #0f172a;
+
+    border-radius: 14px;
+
+    color: white;
+
+    text-align: center;
+}
+
+.habitat-ring {
+    position: relative;
+
+    width: 360px;
+    height: 360px;
+
+    max-width: 100%;
+
+    margin: 20px auto;
+
+    border: 12px solid #94a3b8;
+
+    border-radius: 50%;
+}
+
+.axis-point {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    color: #0f172a;
+
+    border-radius: 50%;
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+}
+
+.radius-line {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 40%;
+
+    height: 2px;
+
+    background: #60a5fa;
+
+    transform-origin: left center;
+
+    transform: rotate(-30deg);
+}
+
+.radius-line span {
+    position: absolute;
+
+    right: 40%;
+
+    top: -25px;
+
+    color: #bfdbfe;
+
+    font-weight: bold;
+}
+
+.astronaut {
+    position: absolute;
+
+    top: 24%;
+    right: 11%;
+
+    font-size: 1.9rem;
+
+    color: #f8fafc;
+}
+
+.centripetal-arrow {
+    position: absolute;
+
+    top: 29%;
+    right: 22%;
+
+    width: 95px;
+    height: 2px;
+
+    transform: rotate(150deg);
+    transform-origin: left center;
+}
+
+.arrow-line {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    background: #fbbf24;
+
+    position: relative;
+}
+
+.arrow-line::after {
+    content: "";
+
+    position: absolute;
+
+    right: -2px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 12px solid #fbbf24;
+}
+
+.arrow-label {
+    position: absolute;
+
+    top: -26px;
+    left: 30px;
+
+    color: #fbbf24;
+
+    font-weight: bold;
+
+    font-size: 1rem;
+}
+
+.rotation-arrow {
+    position: absolute;
+
+    top: 5%;
+    left: 46%;
+
+    color: #60a5fa;
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+}
+
+.diagram-equations {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+}
+
+.diagram-equations span {
+    padding: 10px 16px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    border-radius: 8px;
+
+    font-family: "Courier New", monospace;
+}
+
+@media (max-width: 500px) {
+
+    .habitat-ring {
+        width: 280px;
+        height: 280px;
+    }
+
+}
+
+/* CURVA FUERZA - DESPLAZAMIENTO */
+
+/* =========================================
+   TEMA 5 - VIDEO
+========================================= */
+
+.video-container {
+    position: relative;
+
+    width: 100%;
+    height: 0;
+
+    padding-bottom: 56.25%;
+
+    margin-top: 20px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--border);
+
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+}
+
+
+/* =========================================
+   CURVAS DE RESPUESTA HÁPTICA
+========================================= */
+
+.haptic-response-chart {
+    position: relative;
+
+    width: 100%;
+    max-width: 720px;
+
+    height: 400px;
+
+    margin: 35px auto;
+
+    padding:
+        30px
+        35px
+        60px
+        75px;
+
+    background: #f8fafc;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+}
+
+
+.haptic-chart-area {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    border-left: 2px solid #334155;
+    border-bottom: 2px solid #334155;
+
+    overflow: hidden;
+}
+
+
+/* LÍNEAS DE GUÍA */
+
+.haptic-grid-line {
+    position: absolute;
+
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background: #e2e8f0;
+}
+
+.grid-25 {
+    bottom: 25%;
+}
+
+.grid-50 {
+    bottom: 50%;
+}
+
+.grid-75 {
+    bottom: 75%;
+}
+
+
+/* CURVAS */
+
+.response-line {
+    position: absolute;
+
+    left: 7%;
+    bottom: 7%;
+
+    height: 3px;
+
+    border-radius: 10px;
+
+    transform-origin: left center;
+}
+
+
+/* BAJA RESISTENCIA */
+
+.response-soft {
+    width: 78%;
+
+    background: #60a5fa;
+
+    transform: rotate(-18deg);
+}
+
+
+/* RESISTENCIA PROGRESIVA */
+
+.response-medium {
+    width: 76%;
+
+    background: #2563eb;
+
+    transform: rotate(-32deg);
+}
+
+
+/* ALTA RESISTENCIA */
+
+.response-hard {
+    width: 72%;
+
+    background: #1e3a8a;
+
+    transform: rotate(-46deg);
+}
+
+
+/* ETIQUETAS DE LAS CURVAS */
+
+.response-name {
+    position: absolute;
+
+    padding: 5px 9px;
+
+    background: rgba(255,255,255,0.92);
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.response-name-soft {
+    right: 5%;
+    bottom: 27%;
+
+    color: #2563eb;
+}
+
+
+.response-name-medium {
+    right: 7%;
+    bottom: 53%;
+
+    color: #1d4ed8;
+}
+
+
+.response-name-hard {
+    right: 16%;
+    top: 9%;
+
+    color: #1e3a8a;
+}
+
+
+/* EJES */
+
+.haptic-y-label {
+    position: absolute;
+
+    left: 14px;
+    top: 50%;
+
+    transform:
+        translateY(-50%)
+        rotate(-90deg);
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    color: #475569;
+
+    white-space: nowrap;
+}
+
+
+.haptic-x-label {
+    position: absolute;
+
+    bottom: 15px;
+    left: 55%;
+
+    transform: translateX(-50%);
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    color: #475569;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   EXPLICACIÓN DE LAS CURVAS
+========================================= */
+
+.response-explanation {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+
+    margin-top: 30px;
+}
+
+
+.response-card {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    background: #f8fafc;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+}
+
+
+.response-card strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--primary);
+}
+
+
+.response-card p {
+    margin: 0 !important;
+
+    font-size: 0.88rem;
+
+    color: #64748b !important;
+}
+
+
+.response-dot {
+    display: block;
+
+    flex-shrink: 0;
+
+    width: 12px;
+    height: 12px;
+
+    margin-top: 6px;
+
+    border-radius: 50%;
+}
+
+
+.soft-dot {
+    background: #60a5fa;
+}
+
+
+.medium-dot {
+    background: #2563eb;
+}
+
+
+.hard-dot {
+    background: #1e3a8a;
+}
+
+
+/* =========================================
+   RESPONSIVE TEMA 5
+========================================= */
+
+@media (max-width: 750px) {
+
+    .haptic-response-chart {
+        height: 340px;
+
+        padding:
+            25px
+            20px
+            55px
+            60px;
+    }
+
+
+    .response-explanation {
+        grid-template-columns: 1fr;
+    }
+
+
+    .response-name {
+        font-size: 0.7rem;
+    }
+
+
+    .response-name-soft {
+        right: 2%;
+    }
+
+
+    .response-name-medium {
+        right: 3%;
+    }
+
+
+    .response-name-hard {
+        right: 7%;
+    }
+
+
+    .haptic-x-label {
+        font-size: 0.8rem;
+    }
+
+
+    .haptic-y-label {
+        font-size: 0.8rem;
+    }
+
+}
