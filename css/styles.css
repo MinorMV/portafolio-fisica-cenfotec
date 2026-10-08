@@ -20,8 +20,6 @@
 }
 
 
-/* RESET */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -48,7 +46,6 @@ body {
 }
 
 
-/* HERO */
 
 .hero {
     min-height: 90vh;
@@ -169,8 +166,6 @@ body {
 }
 
 
-/* NAVBAR */
-
 .navbar {
     position: sticky;
 
@@ -253,8 +248,6 @@ section {
 }
 
 
-/* TITULOS DE SECCION */
-
 .section-heading {
     display: flex;
 
@@ -292,7 +285,6 @@ section {
 }
 
 
-/* GRID DE TEMAS */
 
 .topics-grid {
     display: grid;
@@ -413,7 +405,6 @@ section {
 }
 
 
-/* FUENTES */
 
 .sources-section {
     margin-top: 100px;
@@ -423,8 +414,6 @@ section {
     border-top: 1px solid var(--border);
 }
 
-
-/* FOOTER */
 
 footer {
     background: var(--primary);
@@ -453,7 +442,6 @@ footer {
 }
 
 
-/* RESPONSIVE */
 
 @media (max-width: 800px) {
 
@@ -1060,11 +1048,7 @@ footer {
 
 }
 
-/* CURVA FUERZA - DESPLAZAMIENTO */
 
-/* =========================================
-   TEMA 5 - VIDEO
-========================================= */
 
 .video-container {
     position: relative;
@@ -1097,10 +1081,6 @@ footer {
     border: none;
 }
 
-
-/* =========================================
-   CURVAS DE RESPUESTA HÁPTICA
-========================================= */
 
 .haptic-response-chart {
     position: relative;
@@ -1139,8 +1119,6 @@ footer {
 }
 
 
-/* LÍNEAS DE GUÍA */
-
 .haptic-grid-line {
     position: absolute;
 
@@ -1164,8 +1142,6 @@ footer {
     bottom: 75%;
 }
 
-
-/* CURVAS */
 
 .response-line {
     position: absolute;
@@ -1192,7 +1168,6 @@ footer {
 }
 
 
-/* RESISTENCIA PROGRESIVA */
 
 .response-medium {
     width: 76%;
@@ -1203,7 +1178,6 @@ footer {
 }
 
 
-/* ALTA RESISTENCIA */
 
 .response-hard {
     width: 72%;
@@ -1214,7 +1188,6 @@ footer {
 }
 
 
-/* ETIQUETAS DE LAS CURVAS */
 
 .response-name {
     position: absolute;
@@ -1259,7 +1232,6 @@ footer {
 }
 
 
-/* EJES */
 
 .haptic-y-label {
     position: absolute;
@@ -1299,9 +1271,6 @@ footer {
 }
 
 
-/* =========================================
-   EXPLICACIÓN DE LAS CURVAS
-========================================= */
 
 .response-explanation {
     display: grid;
@@ -1379,9 +1348,6 @@ footer {
 }
 
 
-/* =========================================
-   RESPONSIVE TEMA 5
-========================================= */
 
 @media (max-width: 750px) {
 

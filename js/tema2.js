@@ -27,9 +27,6 @@ let jumpChart;
 let animationFrame;
 
 
-// ----------------------------------------
-// MOSTRAR VALORES DE LOS CONTROLES
-// ----------------------------------------
 
 function updateControlValues() {
 
@@ -47,9 +44,6 @@ function updateControlValues() {
 }
 
 
-// ----------------------------------------
-// CALCULAR EL SALTO
-// ----------------------------------------
 
 function calculateJumpData(
     impulse,
@@ -108,9 +102,6 @@ function calculateJumpData(
 }
 
 
-// ----------------------------------------
-// ACTUALIZAR GRÁFICA
-// ----------------------------------------
 
 function updateChart(
     timeData,
@@ -215,9 +206,6 @@ function updateChart(
 }
 
 
-// ----------------------------------------
-// ANIMAR PERSONAJE
-// ----------------------------------------
 
 function animateCharacter(
     impulse,
@@ -312,9 +300,7 @@ function animateCharacter(
 }
 
 
-// ----------------------------------------
-// EJECUTAR SIMULACIÓN
-// ----------------------------------------
+
 
 function runSimulation() {
 
@@ -355,12 +341,6 @@ function runSimulation() {
 }
 
 
-// ----------------------------------------
-// EVENTOS
-// ----------------------------------------
-
-// Los sliders solamente muestran
-// el valor seleccionado.
 
 jumpImpulse.addEventListener(
     "input",
@@ -374,8 +354,6 @@ gravityControl.addEventListener(
 );
 
 
-// La física solo se calcula cuando
-// el usuario presiona el botón.
 
 simulateButton.addEventListener(
     "click",
@@ -383,8 +361,5 @@ simulateButton.addEventListener(
 );
 
 
-// ----------------------------------------
-// ESTADO INICIAL
-// ----------------------------------------
 
 updateControlValues();

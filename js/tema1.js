@@ -1,10 +1,9 @@
-// Datos simulados de la ruta del dron
 const tiempo = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const posicionX = [0, 5, 11, 18, 26, 35, 45, 56, 68, 81, 95];
 const posicionY = [0, 2, 5, 9, 14, 20, 27, 35, 44, 54, 65];
 
-// Cálculo de velocidades por componentes
+
 const velocidadX = [];
 const velocidadY = [];
 const velocidadTotal = [];
@@ -31,10 +30,6 @@ for (let i = 0; i < tiempo.length; i++) {
     }
 }
 
-// Cálculo de aceleración
-// Cálculo de aceleración
-// La aceleración se calcula a partir de dos intervalos
-// consecutivos de velocidad.
 
 const aceleracionX = [];
 const aceleracionY = [];
@@ -75,9 +70,7 @@ for (let i = 0; i < tiempo.length; i++) {
     }
 }
 
-// ========================
-// GRÁFICA DE POSICIÓN
-// ========================
+
 
 new Chart(
     document.getElementById("positionChart"),
@@ -133,9 +126,7 @@ new Chart(
 );
 
 
-// ========================
-// GRÁFICA DE VELOCIDAD
-// ========================
+
 
 new Chart(
     document.getElementById("velocityChart"),
@@ -197,9 +188,6 @@ new Chart(
 );
 
 
-// ========================
-// GRÁFICA DE ACELERACIÓN
-// ========================
 
 new Chart(
     document.getElementById("accelerationChart"),

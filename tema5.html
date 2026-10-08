@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tema 5 | Control háptico</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a class="logo" href="index.html">
+                Física<span>Lab</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="tema1.html">Tema 1</a>
+                <a href="tema2.html">Tema 2</a>
+                <a href="tema3.html">Tema 3</a>
+                <a href="tema4.html">Tema 4</a>
+                <a href="tema5.html">Tema 5</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <main>
+
+        <section class="topic-section">
+
+            <div class="topic-header">
+
+                <span class="topic-label">
+                    Tema 5
+                </span>
+
+                <h1>
+                    El resorte virtual detrás de un control háptico
+                </h1>
+
+                <p class="topic-subtitle">
+                    Ley de Hooke, fuerza elástica y tercera ley de Newton
+                </p>
+
+            </div>
+
+
+            <div class="topic-content">
+
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Caso de uso en Ingeniería del Software
+                    </h3>
+
+                    <p>
+                        Un ejemplo concreto de esta aplicación se encuentra en el
+                        control DualSense de PlayStation 5. Sus gatillos adaptativos
+                        pueden modificar la resistencia que siente el usuario
+                        dependiendo de la acción que ocurre dentro del videojuego.
+                    </p>
+
+                    <p>
+                        Por ejemplo, al representar una acción donde existe tensión,
+                        el software puede aumentar progresivamente la resistencia del
+                        gatillo mientras el jugador lo presiona. De esta forma, una
+                        acción que ocurre dentro del juego produce una sensación física
+                        real en la mano del usuario.
+                    </p>
+
+                </div>
+
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Modelo físico utilizado
+                    </h3>
+
+                    <p>
+                        Una forma sencilla de representar este comportamiento es
+                        mediante la ley de Hooke, utilizada para describir la fuerza
+                        restauradora de un resorte ideal.
+                    </p>
+
+                    <div class="formula">
+                        F = -kx
+                    </div>
+
+                    <p>
+                        Donde:
+                    </p>
+
+                    <ul class="variable-list">
+
+                        <li>
+                            <strong>F:</strong>
+                            fuerza restauradora ejercida por el sistema.
+                        </li>
+
+                        <li>
+                            <strong>k:</strong>
+                            constante de rigidez.
+                        </li>
+
+                        <li>
+                            <strong>x:</strong>
+                            desplazamiento respecto a la posición de equilibrio.
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        El signo negativo indica que la fuerza restauradora actúa
+                        en sentido contrario al desplazamiento.
+                    </p>
+
+                    <p>
+                        También puede relacionarse con la tercera ley de Newton:
+                        cuando el usuario ejerce una fuerza sobre el gatillo, el
+                        mecanismo responde ejerciendo una fuerza en sentido contrario.
+                    </p>
+
+                </div>
+
+
+
+                <div class="content-block">
+
+                    <h3>
+                        ¿Por qué utilizar un modelo físico?
+                    </h3>
+
+                    <p>
+                        Si el control utilizara únicamente una vibración fija, diferentes
+                        acciones podrían producir sensaciones muy similares. En cambio,
+                        un modelo basado en fuerza y desplazamiento permite modificar
+                        la resistencia según lo que ocurre dentro del juego.
+                    </p>
+
+                    <p>
+                        Esto hace posible representar sensaciones distintas, como un
+                        mecanismo suave, una tensión progresiva o una resistencia más
+                        fuerte. El software puede cambiar la respuesta sin depender de
+                        un único patrón de vibración.
+                    </p>
+
+                </div>
+
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Multimedia con análisis
+                    </h3>
+
+                    <p>
+                        El siguiente video muestra el funcionamiento de los gatillos
+                        adaptativos del control DualSense y cómo puede modificarse la
+                        resistencia según la acción representada.
+                    </p>
+
+                    <div class="video-container">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/7gJLVQy-bvM"
+                            title="Adaptive Triggers | PS5"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="data-source">
+                        Fuente del video: PlayStation — Adaptive Triggers | PS5.
+                    </div>
+
+                </div>
+
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Análisis del efecto háptico
+                    </h3>
+
+                    <p>
+                        <strong>Momento analizado: segundo 7 del video.</strong>
+                        En este instante aparece la palabra
+                        <strong>“TENSION”</strong> mientras se muestra el funcionamiento
+                        del gatillo adaptativo. La idea principal es que la fuerza
+                        necesaria para continuar presionándolo puede variar y generar
+                        una sensación de oposición al movimiento.
+                    </p>
+
+                    <p>
+                        Este comportamiento puede relacionarse con la ley de Hooke:
+                    </p>
+
+                    <div class="formula">
+                        F = -kx
+                    </div>
+
+                    <p>
+                        En este modelo, <strong>x</strong> representa el desplazamiento
+                        del gatillo y <strong>F</strong> la fuerza que se opone al
+                        movimiento. Aunque el mecanismo real del control no corresponde
+                        necesariamente a un resorte ideal, esta ecuación permite
+                        representar de manera sencilla la relación entre desplazamiento
+                        y resistencia.
+                    </p>
+
+                    <p>
+                        Desde el punto de vista del software, puede pensarse en
+                        <strong>k</strong> como un valor equivalente de rigidez que puede
+                        cambiar según la acción del videojuego. Un valor pequeño produce
+                        una respuesta más suave, mientras que un valor mayor produce una
+                        oposición más fuerte.
+                    </p>
+
+                </div>
+
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Curvas de respuesta del gatillo
+                    </h3>
+
+                    <p>
+                        La siguiente figura compara tres posibles respuestas del
+                        gatillo. En todos los casos aumenta la fuerza conforme aumenta
+                        el desplazamiento, pero la rapidez con la que aumenta depende
+                        de la rigidez utilizada.
+                    </p>
+
+
+                    <div class="haptic-response-chart">
+
+                        <div class="haptic-y-label">
+                            Fuerza (F)
+                        </div>
+
+                        <div class="haptic-chart-area">
+
+                            <div class="haptic-grid-line grid-25"></div>
+                            <div class="haptic-grid-line grid-50"></div>
+                            <div class="haptic-grid-line grid-75"></div>
+
+                            <div class="response-line response-soft"></div>
+                            <div class="response-line response-medium"></div>
+                            <div class="response-line response-hard"></div>
+
+                            <span class="response-name response-name-soft">
+                                Resistencia baja
+                            </span>
+
+                            <span class="response-name response-name-medium">
+                                Resistencia progresiva
+                            </span>
+
+                            <span class="response-name response-name-hard">
+                                Resistencia alta
+                            </span>
+
+                        </div>
+
+                        <div class="haptic-x-label">
+                            Desplazamiento del gatillo (x)
+                        </div>
+
+                    </div>
+
+
+                    <p class="table-note">
+                        Representación conceptual basada en la relación F = kx.
+                        Elaboración propia. Las curvas no corresponden a mediciones
+                        oficiales del DualSense.
+                    </p>
+
+
+                    <div class="response-explanation">
+
+                        <div class="response-card">
+
+                            <span class="response-dot soft-dot"></span>
+
+                            <div>
+                                <strong>Resistencia baja</strong>
+
+                                <p>
+                                    Representa un gatillo que ofrece poca oposición
+                                    aunque aumente su desplazamiento.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="response-card">
+
+                            <span class="response-dot medium-dot"></span>
+
+                            <div>
+                                <strong>Resistencia progresiva</strong>
+
+                                <p>
+                                    La oposición aumenta progresivamente conforme el
+                                    usuario continúa presionando el gatillo.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="response-card">
+
+                            <span class="response-dot hard-dot"></span>
+
+                            <div>
+                                <strong>Resistencia alta</strong>
+
+                                <p>
+                                    Un pequeño aumento del desplazamiento produce una
+                                    fuerza de oposición considerablemente mayor.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Aplicación en software
+                    </h3>
+
+                    <p>
+                        Desde el punto de vista de programación, el videojuego puede
+                        determinar qué respuesta debe generar el gatillo dependiendo
+                        del estado actual del juego y del desplazamiento realizado
+                        por el usuario.
+                    </p>
+
+                    <p>
+                        Por ejemplo, una acción sencilla podría utilizar una resistencia
+                        baja, mientras que una acción asociada con tensión podría
+                        aumentar progresivamente la oposición. De esta manera, el mismo
+                        dispositivo físico puede producir distintas sensaciones mediante
+                        cambios controlados desde el software.
+                    </p>
+
+                    <p>
+                        Esto ofrece una ventaja frente a una respuesta fija: el sistema
+                        no necesita utilizar siempre el mismo patrón, sino que puede
+                        adaptar la retroalimentación física a diferentes eventos del
+                        videojuego.
+                    </p>
+
+                </div>
+
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Análisis final
+                    </h3>
+
+                    <p>
+                        El control háptico demuestra cómo un concepto sencillo de física
+                        puede utilizarse para mejorar la interacción entre una persona y
+                        un sistema de software. El desplazamiento del gatillo puede
+                        relacionarse con una fuerza de oposición que cambia según los
+                        parámetros definidos por el juego.
+                    </p>
+
+                    <p>
+                        La ley de Hooke permite interpretar este comportamiento mediante
+                        una relación entre fuerza, desplazamiento y rigidez. Esto ayuda
+                        a comprender por qué un sistema háptico puede transmitir
+                        sensaciones diferentes sin modificar físicamente el dispositivo
+                        cada vez que cambia la situación dentro del videojuego.
+                    </p>
+
+                </div>
+
+
+
+                <div class="topic-navigation">
+
+                    <a
+                        href="tema4.html"
+                        class="btn-secondary"
+                    >
+                        ← Tema 4
+                    </a>
+
+                    <a
+                        href="index.html"
+                        class="btn-primary"
+                    >
+                        Volver al inicio
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <strong>Portafolio de Física I</strong>
+                <p>Universidad CENFOTEC</p>
+            </div>
+
+            <div>
+                <p>Minor Mora Vargas</p>
+                <p>2026</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
