@@ -1,14 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Tema 4 | Llantas de Fórmula 1</title>
+
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
+
 <body>
+
 
     <nav class="navbar">
 
@@ -19,12 +27,19 @@
             </a>
 
             <div class="nav-links">
+
                 <a href="index.html">Inicio</a>
+
                 <a href="tema1.html">Tema 1</a>
+
                 <a href="tema2.html">Tema 2</a>
+
                 <a href="tema3.html">Tema 3</a>
+
                 <a href="tema4.html">Tema 4</a>
+
                 <a href="tema5.html">Tema 5</a>
+
             </div>
 
         </div>
@@ -32,9 +47,12 @@
     </nav>
 
 
+
     <main>
 
+
         <section class="topic-section">
+
 
             <div class="topic-header">
 
@@ -53,7 +71,10 @@
             </div>
 
 
+
             <div class="topic-content">
+
+
 
                 <div class="content-block">
 
@@ -80,6 +101,7 @@
                 </div>
 
 
+
                 <div class="content-block">
 
                     <h3>
@@ -87,7 +109,8 @@
                     </h3>
 
                     <p>
-                        La fuerza de fricción puede expresarse mediante:
+                        El modelo básico de fricción relaciona la fuerza disponible
+                        con la fuerza normal mediante:
                     </p>
 
                     <div class="formula">
@@ -99,20 +122,97 @@
                     </p>
 
                     <ul class="variable-list">
-                        <li><strong>F_f</strong>: fuerza de fricción.</li>
-                        <li><strong>μ</strong>: coeficiente de fricción.</li>
-                        <li><strong>N</strong>: fuerza normal.</li>
+
+                        <li>
+                            <strong>F_f</strong>:
+                            fuerza de fricción.
+                        </li>
+
+                        <li>
+                            <strong>μ</strong>:
+                            coeficiente de fricción.
+                        </li>
+
+                        <li>
+                            <strong>N</strong>:
+                            fuerza normal ejercida sobre la llanta.
+                        </li>
+
                     </ul>
 
                     <p>
-                        En una llanta de competición, el valor de <strong>μ</strong>
-                        no es constante. Este coeficiente depende, entre otros factores,
-                        de la temperatura del neumático. Si la llanta está demasiado fría,
-                        no alcanza el agarre ideal; y si se sobrecalienta, también pierde
-                        eficiencia.
+                        También se puede distinguir entre el coeficiente de fricción
+                        estática y el coeficiente de fricción cinética:
+                    </p>
+
+                    <div class="formula">
+                        F_s ≤ μ_s N
+                    </div>
+
+                    <div class="formula">
+                        F_k = μ_k N
+                    </div>
+
+                    <p>
+                        En el primer caso, <strong>μ_s</strong> representa el
+                        coeficiente de fricción estática, mientras que
+                        <strong>μ_k</strong> corresponde al coeficiente de fricción
+                        cinética. Estos modelos permiten comprender de forma básica
+                        cómo una fuerza de contacto puede limitar el agarre disponible.
+                    </p>
+
+                    <p>
+                        Sin embargo, en una llanta de competición el valor efectivo
+                        de <strong>μ</strong> no permanece constante. Entre otros
+                        factores, cambia con la temperatura del neumático. Cuando la
+                        llanta se encuentra demasiado fría no alcanza su mejor nivel
+                        de agarre, mientras que al superar su zona óptima también puede
+                        perder rendimiento.
                     </p>
 
                 </div>
+
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Carga vertical y agarre real
+                    </h3>
+
+                    <p>
+                        El modelo sencillo
+                        <strong>F_f = μN</strong>
+                        supone que el coeficiente de fricción permanece constante.
+                        Bajo esa condición, si la fuerza normal se duplicara, la fuerza
+                        de fricción disponible también se duplicaría.
+                    </p>
+
+                    <p>
+                        Un neumático real presenta un comportamiento más complejo.
+                        Al aumentar la carga vertical sobre la llanta, el agarre total
+                        también aumenta, pero no necesariamente en la misma proporción.
+                        Por esta razón, el agarre real no puede representarse en todas
+                        las condiciones suponiendo un valor fijo de
+                        <strong>μ</strong>.
+                    </p>
+
+                    <p>
+                        Este comportamiento se conoce como sensibilidad a la carga del
+                        neumático. Para un software de simulación resulta importante,
+                        porque utilizar únicamente un coeficiente fijo podría
+                        sobreestimar o subestimar la fuerza disponible durante una
+                        frenada, una aceleración o una curva.
+                    </p>
+
+                    <p>
+                        Por eso, los modelos más completos pueden considerar variables
+                        como la carga, la temperatura y el estado del neumático para
+                        modificar dinámicamente el agarre disponible.
+                    </p>
+
+                </div>
+
 
 
                 <div class="content-block">
@@ -125,17 +225,91 @@
                         Si un videojuego o simulador asignara un mismo nivel de agarre
                         para cualquier situación, el comportamiento del vehículo sería
                         poco realista. El conductor no percibiría cambios al calentar
-                        las llantas o al exigir demasiado el neumático en curvas y frenadas.
+                        las llantas o al exigir demasiado el neumático en curvas y
+                        frenadas.
                     </p>
 
                     <p>
                         Usar un modelo físico permite que el software ajuste el valor
-                        del agarre según la temperatura y otras variables, produciendo
-                        una simulación más útil para entrenamiento, análisis y diseño
-                        de estrategias.
+                        del agarre según la temperatura, la carga y otras variables,
+                        produciendo una simulación más útil para entrenamiento,
+                        análisis y diseño de estrategias.
+                    </p>
+
+                    <p>
+                        La ventaja es que el vehículo puede responder de manera
+                        diferente ante distintas condiciones sin programar manualmente
+                        un comportamiento específico para cada situación. A cambio,
+                        el modelo requiere más variables y cálculos que una solución
+                        basada únicamente en un valor fijo de agarre.
                     </p>
 
                 </div>
+
+
+
+                <div class="content-block">
+
+                    <h3>
+                        Modelo utilizado para generar los datos
+                    </h3>
+
+                    <p>
+                        Para construir la visualización se utiliza un modelo matemático
+                        simplificado que representa una ventana óptima de temperatura.
+                        La finalidad es generar los datos de forma calculada y observar
+                        cómo cambia el coeficiente de fricción al acercarse o alejarse
+                        de una temperatura de referencia.
+                    </p>
+
+                    <div class="formula">
+                        μ(T) = μmin + (μmax - μmin)e^(-(T - Topt)² / 2σ²)
+                    </div>
+
+                    <p>
+                        Para esta representación se utilizaron los siguientes
+                        parámetros:
+                    </p>
+
+                    <ul class="variable-list">
+
+                        <li>
+                            <strong>μmin = 0.75</strong>:
+                            valor mínimo utilizado en el modelo.
+                        </li>
+
+                        <li>
+                            <strong>μmax = 1.22</strong>:
+                            valor máximo del coeficiente calculado.
+                        </li>
+
+                        <li>
+                            <strong>Topt = 100 °C</strong>:
+                            temperatura óptima definida para el ejemplo.
+                        </li>
+
+                        <li>
+                            <strong>σ = 22</strong>:
+                            parámetro que controla el ancho de la ventana térmica.
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        Cuando la temperatura se aproxima a
+                        <strong>100 °C</strong>, el modelo produce un valor mayor
+                        del coeficiente de fricción. Al alejarse de esa zona, el
+                        coeficiente disminuye progresivamente.
+                    </p>
+
+                    <p>
+                        Este modelo se utiliza únicamente con fines educativos.
+                        No representa la curva oficial de un compuesto específico
+                        utilizado en Fórmula 1.
+                    </p>
+
+                </div>
+
 
 
                 <div class="content-block">
@@ -145,88 +319,159 @@
                     </h3>
 
                     <p>
-                        La siguiente gráfica representa una estimación del coeficiente
-                        de fricción de una llanta de Fórmula 1 según su temperatura.
-                        Los valores se presentan como una visualización de elaboración
-                        propia para ilustrar el concepto de ventana óptima de trabajo.
+                        La siguiente gráfica presenta los valores del coeficiente
+                        de fricción calculados por el modelo para temperaturas
+                        comprendidas entre 60 °C y 130 °C.
                     </p>
 
+                    <p>
+                        La visualización permite observar una ventana de trabajo:
+                        el coeficiente aumenta conforme la temperatura se aproxima
+                        al valor óptimo definido y disminuye cuando se aleja de él.
+                    </p>
+
+
                     <div class="chart-container">
+
                         <canvas id="tireChart"></canvas>
+
                     </div>
 
+
                     <div class="data-source">
-                        Fuente de los datos: elaboración propia con fines educativos, basada en el comportamiento
-                        general de una ventana óptima de temperatura del neumático. Los valores no representan datos
+
+                        Fuente de los datos: valores calculados por el autor mediante
+                        el modelo matemático educativo de ventana térmica presentado
+                        en esta página. Los valores no corresponden a mediciones
                         oficiales de un compuesto específico de Fórmula 1.
+
                     </div>
 
                 </div>
+
 
 
                 <div class="content-block">
 
                     <h3>
-                        Datos de referencia
+                        Datos calculados
                     </h3>
+
 
                     <div class="table-container">
 
+
                         <table class="data-table">
 
+
                             <thead>
+
                                 <tr>
-                                    <th>Temperatura (°C)</th>
-                                    <th>Coeficiente de fricción (μ)</th>
+
+                                    <th>
+                                        Temperatura (°C)
+                                    </th>
+
+                                    <th>
+                                        Coeficiente de fricción (μ)
+                                    </th>
+
                                 </tr>
+
                             </thead>
 
+
                             <tbody>
+
                                 <tr>
+
                                     <td>60</td>
-                                    <td>0.85</td>
+
+                                    <td>0.840</td>
+
                                 </tr>
+
+
                                 <tr>
+
                                     <td>70</td>
-                                    <td>0.95</td>
+
+                                    <td>0.935</td>
+
                                 </tr>
+
+
                                 <tr>
+
                                     <td>80</td>
-                                    <td>1.05</td>
+
+                                    <td>1.061</td>
+
                                 </tr>
+
+
                                 <tr>
+
                                     <td>90</td>
-                                    <td>1.15</td>
+
+                                    <td>1.174</td>
+
                                 </tr>
+
+
                                 <tr>
+
                                     <td>100</td>
-                                    <td>1.22</td>
+
+                                    <td>1.220</td>
+
                                 </tr>
+
+
                                 <tr>
+
                                     <td>110</td>
-                                    <td>1.18</td>
+
+                                    <td>1.174</td>
+
                                 </tr>
+
+
                                 <tr>
+
                                     <td>120</td>
-                                    <td>1.08</td>
+
+                                    <td>1.061</td>
+
                                 </tr>
+
+
                                 <tr>
+
                                     <td>130</td>
-                                    <td>0.96</td>
+
+                                    <td>0.935</td>
+
                                 </tr>
+
                             </tbody>
+
 
                         </table>
 
+
                     </div>
 
+
                     <p class="table-note">
-                        Se observa un aumento del agarre hasta una zona óptima cercana a
-                        los 100 °C, seguido por una disminución cuando la llanta supera
-                        esa ventana de temperatura.
+
+                        Los valores fueron calculados utilizando la misma ecuación
+                        implementada en JavaScript para construir la gráfica.
+
                     </p>
 
                 </div>
+
 
 
                 <div class="content-block">
@@ -236,68 +481,122 @@
                     </h3>
 
                     <p>
-                        La gráfica muestra que el coeficiente de fricción aumenta a medida
-                        que la llanta se acerca a su rango óptimo de temperatura. En este
-                        ejemplo, el valor máximo se alcanza alrededor de los 100 °C, donde
-                        el neumático ofrece su mejor agarre.
+                        La gráfica muestra que el coeficiente de fricción aumenta
+                        mientras la temperatura se acerca a la zona óptima definida
+                        en el modelo. El valor máximo se alcanza en
+                        <strong>100 °C</strong>, donde se obtiene
+                        <strong>μ = 1.220</strong>.
                     </p>
 
                     <p>
-                        Cuando la temperatura es demasiado baja, la llanta no se adhiere de
-                        forma eficiente a la pista. Por otro lado, si la temperatura aumenta
-                        en exceso, el coeficiente de fricción vuelve a disminuir, reduciendo
-                        el rendimiento del vehículo.
+                        Cuando el neumático se encuentra por debajo de esa temperatura,
+                        el coeficiente calculado es menor. El mismo comportamiento se
+                        presenta al superar la zona óptima, haciendo que la curva
+                        disminuya nuevamente.
                     </p>
 
                     <p>
-                        En software de simulación, este comportamiento permite modelar de
-                        forma más realista la conducción y analizar estrategias de carrera,
-                        ya que el agarre disponible deja de ser un valor fijo y pasa a depender
-                        del estado dinámico del neumático.
+                        Esta visualización no intenta reproducir un compuesto real de
+                        Fórmula 1, sino demostrar cómo un programa puede transformar
+                        una variable física, en este caso la temperatura, en un valor
+                        dinámico de agarre.
+                    </p>
+
+                    <p>
+                        En un simulador, ese valor puede utilizarse junto con la fuerza
+                        normal para calcular una fuerza disponible aproximada:
+                    </p>
+
+                    <div class="formula">
+                        F_f(T) = μ(T)N
+                    </div>
+
+                    <p>
+                        De esta manera, el agarre deja de ser una constante y pasa a
+                        depender del estado del neumático. Este tipo de comportamiento
+                        permite construir una simulación más flexible que un sistema
+                        basado únicamente en valores fijos.
                     </p>
 
                 </div>
+
 
 
                 <div class="topic-navigation">
 
-                    <a href="tema3.html" class="btn-secondary">
+
+                    <a
+                        href="tema3.html"
+                        class="btn-secondary"
+                    >
                         ← Tema 3
                     </a>
 
-                    <a href="tema5.html" class="btn-primary">
+
+                    <a
+                        href="tema5.html"
+                        class="btn-primary"
+                    >
                         Tema 5 →
                     </a>
 
+
                 </div>
+
 
             </div>
 
+
         </section>
+
 
     </main>
 
 
+
     <footer>
+
 
         <div class="footer-content">
 
-            <div>
-                <strong>Portafolio de Física I</strong>
-                <p>Universidad CENFOTEC</p>
-            </div>
 
             <div>
-                <p>Minor Mora Vargas</p>
-                <p>2026</p>
+
+                <strong>
+                    Portafolio de Física I
+                </strong>
+
+                <p>
+                    Universidad CENFOTEC
+                </p>
+
             </div>
+
+
+            <div>
+
+                <p>
+                    Minor Mora Vargas
+                </p>
+
+                <p>
+                    2026
+                </p>
+
+            </div>
+
 
         </div>
 
+
     </footer>
 
+
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script src="js/tema4.js"></script>
+
 
 </body>
 
